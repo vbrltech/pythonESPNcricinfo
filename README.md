@@ -1,6 +1,6 @@
 # python-espncricinfo
 
-A Python 3 client for ESPNCricinfo's match, summary and player information.
+VBRL fork of a Python 3 client for ESPNCricinfo's match, summary and player information.
 
 ### Description
 
@@ -13,7 +13,7 @@ The current version of this library is 0.6.1. It is very much a work in progress
 ### Installation
 
 ```python
-pip3 install python-espncricinfo
+pip3 install git+https://github.com/vbrltech/pythonESPNcricinfo.git
 ```
 
 ### Usage

@@ -5,6 +5,7 @@ from espncricinfo.exceptions import PlayerNotFoundError
 from espncricinfo.match import Match
 import csv
 
+
 class Player(object):
 
     def __init__(self, player_id):
@@ -63,7 +64,7 @@ class Player(object):
         return self.json['age']
 
     def _major_teams(self):
-        return [x.text for x in self.parsed_html.find('div', class_='overview-teams-grid').find_all('h5')]
+        return [x.text for x in self.parsed_html.find('div', class_='ds-grid lg:ds-grid-cols-3 ds-grid-cols-2 ds-gap-y-4').find_all('h5')]
 
     def _playing_role(self):
         return self.json['position']
