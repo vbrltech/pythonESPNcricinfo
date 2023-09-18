@@ -9,10 +9,10 @@ class Player(object):
 
     def __init__(self, player_id):
         self.player_id=player_id
-        self.url = "https://www.espncricinfo.com/player/player-name-{0}".format(str(player_id))
+        self.url = "https://www.espncricinfo.com/cricketers/player-name-{0}".format(str(player_id))
         self.json_url = "http://core.espnuk.org/v2/sports/cricket/athletes/{0}".format(str(player_id))
-        self.parsed_html = self.get_html() 
-        self.json = self.get_json()       
+        self.parsed_html = self.get_html()
+        self.json = self.get_json()
         self.cricinfo_id = str(player_id)
         self.__unicode__ = self._full_name()
         self.name = self._name()
